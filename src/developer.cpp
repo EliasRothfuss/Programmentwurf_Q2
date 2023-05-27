@@ -24,25 +24,23 @@ std::string developer::get_alias()
     return developer::alias;
 }
 
-senior_developer::senior_developer(std::string _name, std::string _alias):developer(_name , _alias)
+senior_developer::senior_developer(std::string _name, std::string _alias): developer(_name, _alias)
 {
-    developer::name = _name;
-    developer::alias = _alias;   
-}
+
+}         
 
 junior_developer::junior_developer(std::string _name, std::string _alias):developer(_name , _alias)
 {
-    developer::name = _name;
-    developer::alias = _alias;    
+        
 }
 
-void junior_developer::solve_problem() const override 
+void junior_developer::solve_problem() const
 {
     drink_coffee();
-};
+}
 
-void senior_developer::solve_problem() const override 
+void senior_developer::solve_problem() const
 {
     drink_coffee();
-};
+}
 

@@ -28,17 +28,17 @@ class developer
 class senior_developer : public developer
 {
     public:
-    senior_developer(std::string _name, std::string _alias):developer(_name , _alias);
-    
-    void solve_problem() const override;
+        senior_developer(std::string _name, std::string _alias);
+
+        void solve_problem() const override;
 };
 
 class junior_developer : public developer
 {
     public:
-    junior_developer(std::string _name, std::string _alias):developer(_name , _alias);
+        junior_developer(std::string _name, std::string _alias);
     
-    void solve_problem() const override;
+        void solve_problem() const override;
 
 };
 
