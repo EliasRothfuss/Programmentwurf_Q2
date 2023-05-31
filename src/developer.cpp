@@ -3,10 +3,10 @@
 #include <iostream>
 #include <string>
 
-developer::developer(std::string _name, std::string _alias)
+developer::developer(std::string _name, std::string _alias)  // Base Class Constructor
 {
-    developer::name = _name;
-    developer::alias = _alias;
+    developer::name = _name;    // Set Developer Name
+    developer::alias = _alias;  // Set Developer Alias
 }
 
 void developer::drink_coffee()
@@ -14,33 +14,41 @@ void developer::drink_coffee()
     std::cout << "I need some Coffee" << std::endl;
 }
 
-std::string developer::get_name()
+std::string developer::get_name() const  // Get the name of the developer
 {
     return developer::name;
 }
 
-std::string developer::get_alias()
+std::string developer::get_alias() const  // Get the alias of the developer
 {
     return developer::alias;
 }
 
-senior_developer::senior_developer(std::string _name, std::string _alias): developer(_name, _alias)
+auto operator<<(std::ostream& stream, const developer& dev)
+    -> std::ostream&  // Overloaded operator << to output developer name and alias
 {
-
-}         
-
-junior_developer::junior_developer(std::string _name, std::string _alias):developer(_name , _alias)
-{
-        
+    stream << "Name: " << dev.get_name() << " Alias: " << dev.get_alias() << std::endl;
+    return stream;
 }
 
-void junior_developer::solve_problem() const
+senior_developer::senior_developer(std::string _name, std::string _alias)
+    : developer(_name, _alias)  // Constructor for the senior_developer class
 {
-    drink_coffee();
 }
 
-void senior_developer::solve_problem() const
+junior_developer::junior_developer(std::string _name, std::string _alias)
+    : developer(_name, _alias)  // Constructor for the junior_developer class
 {
-    drink_coffee();
 }
 
+void junior_developer::solve_problem()
+    const  // Implementation of the solve_problem method for the junior_developer class
+{
+    developer::drink_coffee();
+}
+
+void senior_developer::solve_problem()
+    const  // Implementation of the solve_problem method for the senior_developer class
+{
+    developer::drink_coffee();
+}
