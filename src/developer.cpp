@@ -3,52 +3,52 @@
 #include <iostream>
 #include <string>
 
-developer::developer(std::string _name, std::string _alias)  // Base Class Constructor
+Developer::Developer(std::string name, std::string alias)  // Base Class Constructor
 {
-    developer::name = _name;    // Set Developer Name
-    developer::alias = _alias;  // Set Developer Alias
+    Developer::name_ = name;    // Set Developer Name
+    Developer::alias_ = alias;  // Set Developer Alias
 }
 
-void developer::drink_coffee()
+void Developer::drink_coffee()
 {
     std::cout << "I need some Coffee" << std::endl;
 }
 
-std::string developer::get_name() const  // Get the name of the developer
+std::string Developer::get_name() const  // Get the name of the Developer
 {
-    return developer::name;
+    return Developer::name_;
 }
 
-std::string developer::get_alias() const  // Get the alias of the developer
+std::string Developer::get_alias() const  // Get the alias of the Developer
 {
-    return developer::alias;
+    return Developer::alias_;
 }
 
-auto operator<<(std::ostream& stream, const developer& dev)
-    -> std::ostream&  // Overloaded operator << to output developer name and alias
+auto operator<<(std::ostream& stream, const Developer& dev)
+    -> std::ostream&  // Overloaded operator << to output Developer name and alias
 {
     stream << "Name: " << dev.get_name() << " Alias: " << dev.get_alias() << std::endl;
     return stream;
 }
 
-senior_developer::senior_developer(std::string _name, std::string _alias)
-    : developer(_name, _alias)  // Constructor for the senior_developer class
+SeniorDeveloper::SeniorDeveloper(std::string name, std::string alias)
+    : Developer(name, alias)  // Constructor for the SeniorDeveloper class
 {
 }
 
-junior_developer::junior_developer(std::string _name, std::string _alias)
-    : developer(_name, _alias)  // Constructor for the junior_developer class
+JuniorDeveloper::JuniorDeveloper(std::string name, std::string alias)
+    : Developer(name, alias)  // Constructor for the JuniorDeveloper class
 {
 }
 
-void junior_developer::solve_problem()
-    const  // Implementation of the solve_problem method for the junior_developer class
+void JuniorDeveloper::solve_problem()
+    const  // Implementation of the solve_problem method for the JuniorDeveloper class
 {
-    developer::drink_coffee();
+    Developer::drink_coffee();
 }
 
-void senior_developer::solve_problem()
-    const  // Implementation of the solve_problem method for the senior_developer class
+void SeniorDeveloper::solve_problem()
+    const  // Implementation of the solve_problem method for the SeniorDeveloper class
 {
-    developer::drink_coffee();
+    Developer::drink_coffee();
 }

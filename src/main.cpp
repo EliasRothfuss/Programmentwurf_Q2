@@ -1,5 +1,5 @@
-#include <stdint.h>
 #include <memory>
+#include <stdint.h>
 #include <vector>
 
 #include <iostream>
@@ -8,12 +8,12 @@
 
 auto main() -> int
 {
-    std::vector<std::shared_ptr<developer>> developer_vec; //created vector for developer
+    std::vector<std::shared_ptr<Developer>> developer_vec; //created vector for Developer
 
-    developer_vec.push_back(std::make_shared<senior_developer>("M","Z")); //add class senior_developer to vector
-    developer_vec.push_back(std::make_shared<junior_developer>("M","M")); //add class junior_developer to vector
+    developer_vec.push_back(std::make_shared<SeniorDeveloper>("M","Z")); //add class SeniorDeveloper to vector
+    developer_vec.push_back(std::make_shared<JuniorDeveloper>("M","M")); //add class JuniorDeveloper to vector
 
-    for(auto &itr : developer_vec) //loop over developer_vec elements
+    for(auto &itr : developer_vec) //loop over Developer_vec elements
     {
         itr->solve_problem(); //call solve_problem method for elements in vector
     }
