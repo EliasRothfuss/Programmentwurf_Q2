@@ -8,15 +8,15 @@
 
 auto main() -> int
 {
-    std::vector<std::shared_ptr<developer>> developer_;
+    std::vector<std::shared_ptr<developer>> developer_vec; //created vector for developer
 
-    //developer_.push_back(std::make_shared<senior_developer>());
-    //developer.push_back(std::make_shared<junior_developer>());
+    developer_vec.push_back(std::make_shared<senior_developer>("M","Z")); //add class senior_developer to vector
+    developer_vec.push_back(std::make_shared<junior_developer>("M","M")); //add class junior_developer to vector
 
-    /*for(auto &itr : developer)
+    for(auto &itr : developer_vec) //loop over developer_vec elements
     {
-        itr->solve_problem();
+        itr->solve_problem(); //call solve_problem method for elements in vector
     }
 
-    return 0;*/
+    return 0;
 }

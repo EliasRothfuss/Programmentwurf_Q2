@@ -9,12 +9,11 @@ class developer  // Base Class Developer
     std::string name;   // Name of the developer
     std::string alias;  // Alias of the developer
 
-    virtual void solve_problem() const = 0;  // vi
-
    public:
     developer(std::string _name, std::string _alias);  // Constructor to set the name and alias of the developer
 
     static void drink_coffee();  // Imported method ;)
+    virtual void solve_problem() const = 0;  // vi
 
     std::string get_name() const;   // Get the name of the developer
     std::string get_alias() const;  // Get the alias of the developer
