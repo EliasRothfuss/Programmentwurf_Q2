@@ -43,8 +43,10 @@ jobs:
     
     - name: Build and run tests
       run: |
-        mkdir -p build
+        mkdir build
         cd build
         cmake ..
         make
+        ctest
         cd ../../
+
