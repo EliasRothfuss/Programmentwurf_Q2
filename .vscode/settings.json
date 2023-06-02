@@ -6,7 +6,6 @@
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "clang-format.executable": "clang-format",
-    "clang-tidy.executable": "clang-tidy-16",
     "clang-tidy.fixOnSave": true,
     "clang-tidy.lintOnSave": true,
     "clang-tidy.compilerArgs": [
@@ -68,4 +67,9 @@
         "typeinfo": "cpp",
         "variant": "cpp"
     },
+    "cSpell.ignoreWords": [
+        "FJFSUBGBTBITDAD"
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "clang-tidy.buildPath": "${workspaceFolder}/build",
 }
