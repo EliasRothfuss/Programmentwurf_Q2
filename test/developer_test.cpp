@@ -1,17 +1,16 @@
 #include "gtest/gtest.h"  // include the gtest functions & macros
 #include "developer.hpp"
 
-#define test_name Kaffeemaschiene;
-
-TEST(DeveloperTest, ConstructorTest) {
-    JuniorDeveloper dev("FFF", "DDD");
-    ASSERT_EQ(dev.get_name(), "FFF");
-    ASSERT_EQ(dev.get_alias(), "DDD");
+// Test for constructor of Developer class
+TEST(JuniorDeveloperTest, ConstructorTest) {
+    JuniorDeveloper junior_dev("Junior Name", "Junior Alias");
+    ASSERT_EQ(junior_dev.get_name(), "Junior Name");
+    ASSERT_EQ(junior_dev.get_alias(), "Junior Alias");
 }
 
-
-TEST(SeniorTest, ConstructorTest) {
-    SeniorDeveloper dev("test_name", "test_name");
-    ASSERT_EQ(dev.get_name(), "test_name");
-    ASSERT_STREQ(dev.get_alias().c_str(), "test_name"); //to do, STREQ or EQ Funktion, decide whats better
+// Test for constructor of SeniorDeveloper class
+TEST(SeniorDeveloperTest, ConstructorTest) {
+    SeniorDeveloper senior_dev("Senior Name", "Senior Alias");
+    ASSERT_EQ(senior_dev.get_name(), "Senior Name");
+    ASSERT_EQ(senior_dev.get_alias(), "Senior Alias");
 }
