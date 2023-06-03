@@ -1,16 +1,31 @@
 #include "gtest/gtest.h"  // include the gtest functions & macros
 #include "developer.hpp"
 
-// Test for constructor of Developer class
-TEST(JuniorDeveloperTest, ConstructorTest) {
-    JuniorDeveloper junior_dev("Junior Name", "Junior Alias");
-    ASSERT_EQ(junior_dev.get_name(), "Junior Name");
-    ASSERT_EQ(junior_dev.get_alias(), "Junior Alias");
+
+//Test Fixture
+class DeveloperTest : public ::testing::Test {
+
+};
+
+
+// Test for Constructor and Getter of senior developer class 
+TEST(DeveloperTest, SeniorDeveloperConstructorAndGetters) {
+    std::string expected_name = "Mark";
+    std::string expected_alias = "MK";
+
+    SeniorDeveloper senior_developer(expected_name, expected_alias);
+
+    EXPECT_EQ(senior_developer.get_name(), expected_name);
+    EXPECT_EQ(senior_developer.get_alias(), expected_alias);
 }
 
-// Test for constructor of SeniorDeveloper class
-TEST(SeniorDeveloperTest, ConstructorTest) {
-    SeniorDeveloper senior_dev("Senior Name", "Senior Alias");
-    ASSERT_EQ(senior_dev.get_name(), "Senior Name");
-    ASSERT_EQ(senior_dev.get_alias(), "Senior Alias");
+// Test for Constructor and Getter of junior developer class
+TEST(DeveloperTest, JuniorDeveloperConstructorAndGetters) {
+    std::string expected_name = "Mike";
+    std::string expected_alias = "M";
+
+    JuniorDeveloper junior_developer(expected_name, expected_alias);
+
+    EXPECT_EQ(junior_developer.get_name(), expected_name);
+    EXPECT_EQ(junior_developer.get_alias(), expected_alias);
 }
