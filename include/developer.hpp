@@ -13,12 +13,12 @@ class Developer  // Base Class Developer
    public:
     Developer(std::string name, std::string alias);  // Constructor to set the name and alias of the Developer
     virtual ~Developer() {};
-    
+
     static void drink_coffee();              // Imported method ;)
     virtual void solve_problem() const = 0;  // vi
 
-    std::string get_name() const;   // Get the name of the Developer
-    std::string get_alias() const;  // Get the alias of the Developer
+    auto get_name() const -> std::string;   // Get the name of the Developer
+    auto get_alias() const -> std::string;  // Get the alias of the Developer
 };
 
 auto operator<<(std::ostream& stream, const Developer& dev)

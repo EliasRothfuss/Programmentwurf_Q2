@@ -15,12 +15,12 @@ void Developer::drink_coffee()
     std::cout << "I need some Coffee" << std::endl;
 }
 
-std::string Developer::get_name() const  // Get the name of the Developer
+auto Developer::get_name() const -> std::string // Get the name of the Developer
 {
     return name_;
 }
 
-std::string Developer::get_alias() const  // Get the alias of the Developer
+auto Developer::get_alias() const -> std::string // Get the alias of the Developer
 {
     return alias_;
 }
