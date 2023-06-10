@@ -3,12 +3,11 @@
 #include <iostream>
 #include <string>
 
-#define spacer std::cout << "------------------" << std::endl
+#define spacer std::cout << "------------------" << std::endl //??? do as function
 
-Developer::Developer(std::string name, std::string alias)  // Base Class Constructor
+Developer::Developer(std::string name, std::string alias) // Base Class Constructor
+: name_(std::move(name)), alias_(std::move(alias)) // member initialization list
 {
-    Developer::name_ = name;    // Set Developer Name
-    Developer::alias_ = alias;  // Set Developer Alias
 }
 
 void Developer::drink_coffee()
@@ -18,12 +17,12 @@ void Developer::drink_coffee()
 
 std::string Developer::get_name() const  // Get the name of the Developer
 {
-    return Developer::name_;
+    return name_;
 }
 
 std::string Developer::get_alias() const  // Get the alias of the Developer
 {
-    return Developer::alias_;
+    return alias_;
 }
 
 void Developer::solve_problem_template() const
@@ -40,13 +39,15 @@ auto operator<<(std::ostream& stream, const Developer& dev)
 }
 
 SeniorDeveloper::SeniorDeveloper(std::string name, std::string alias)
-    : Developer(name, alias)  // Constructor for the SeniorDeveloper class
+    : Developer(std::move(name), std::move(alias))  // Constructor for the SeniorDeveloper class
 {
+
 }
 
 JuniorDeveloper::JuniorDeveloper(std::string name, std::string alias)
-    : Developer(name, alias)  // Constructor for the JuniorDeveloper class
+    : Developer(std::move(name), std::move(alias))  // Constructor for the JuniorDeveloper class
 {
+
 }
 
 void JuniorDeveloper::solve_problem() const  // Implementation of the solve_problem method for the JuniorDeveloper class

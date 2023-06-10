@@ -12,7 +12,8 @@ class Developer  // Base Class Developer
 
    public:
     Developer(std::string name, std::string alias);  // Constructor to set the name and alias of the Developer
-
+    virtual ~Developer() {};
+    
     static void drink_coffee();              // Imported method ;)
     virtual void solve_problem() const = 0;  // vi
 
@@ -28,15 +29,15 @@ class SeniorDeveloper : public Developer
    public:
     SeniorDeveloper(std::string name, std::string alias);  // Constructor for the SeniorDeveloper class
 
-    void solve_problem() const override;  // Implementation of the solve_problem method for the SeniorDeveloper class
+    virtual void solve_problem() const override;  // Implementation of the solve_problem method for the SeniorDeveloper class
 };
 
 class JuniorDeveloper : public Developer
 {
    public:
-    JuniorDeveloper(std::string name, std::string alias);  // Constructor for the JunioDeveloper class
+    JuniorDeveloper(std::string name, std::string alias);  // Constructor for the JuniorDeveloper class
 
-    void solve_problem() const override;  // Implementation of the solve_problem method for the JuniorDeveloper class
+    virtual void solve_problem() const override;  // Implementation of the solve_problem method for the JuniorDeveloper class
 };
 
 #endif
