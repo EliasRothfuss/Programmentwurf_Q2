@@ -4,28 +4,37 @@
 
 //Test Fixture
 class DeveloperTest : public ::testing::Test {
+protected:
+
+DeveloperTest() {   //Constructor
+    senior_ = new SeniorDeveloper(expected_senior_name, expected_senior_alias);
+    junior_ = new JuniorDeveloper(expected_junior_name, expected_junior_alias);
+}
+
+~DeveloperTest() override { //Destructor
+    delete senior_;
+    delete junior_;
+}
+
+
+SeniorDeveloper* senior_; //necessary because SeniorDeveloper has no Default Constructor
+JuniorDeveloper* junior_;
+
+const std::string expected_senior_name = "Mark";
+const std::string expected_senior_alias = "MK";
+const std::string expected_junior_name = "Mike";
+const std::string expected_junior_alias = "M";
 
 };
 
-
-// Test for Constructor and Getter of senior developer class 
-TEST(DeveloperTest, SeniorDeveloperConstructorAndGetters) {
-    std::string expected_name = "Mark";
-    std::string expected_alias = "MK";
-
-    SeniorDeveloper senior_developer(expected_name, expected_alias);
-
-    EXPECT_EQ(senior_developer.get_name(), expected_name);
-    EXPECT_EQ(senior_developer.get_alias(), expected_alias);
+// Test for Constructor and Getter of senior and junior developer class 
+TEST_F(DeveloperTest, TestInitialisation){
+    EXPECT_EQ(senior_-> get_name(), expected_senior_name);
+    EXPECT_EQ(senior_-> get_alias(), expected_senior_alias);
+    EXPECT_EQ(junior_-> get_name(), expected_junior_name);
+    EXPECT_EQ(junior_-> get_alias(), expected_junior_alias);
 }
 
-// Test for Constructor and Getter of junior developer class
-TEST(DeveloperTest, JuniorDeveloperConstructorAndGetters) {
-    std::string expected_name = "Mike";
-    std::string expected_alias = "M";
 
-    JuniorDeveloper junior_developer(expected_name, expected_alias);
 
-    EXPECT_EQ(junior_developer.get_name(), expected_name);
-    EXPECT_EQ(junior_developer.get_alias(), expected_alias);
-}
+
