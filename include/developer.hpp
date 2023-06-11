@@ -12,7 +12,7 @@ class Developer  // Base Class Developer
 
    public:
     Developer(std::string name, std::string alias);  // Constructor to set the name and alias of the Developer
-    virtual ~Developer() {};
+    virtual ~Developer() = default;
 
     static void drink_coffee();              // Imported method ;)
     virtual void solve_problem() const = 0;  // vi
