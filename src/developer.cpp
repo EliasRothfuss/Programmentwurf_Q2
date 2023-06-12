@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 
-#define spacer std::cout << "------------------" << std::endl //??? do as function
-
 Developer::Developer(std::string name, std::string alias) // Base Class Constructor
 : name_(std::move(name)), alias_(std::move(alias)) // member initialization list
 {
@@ -52,18 +50,18 @@ JuniorDeveloper::JuniorDeveloper(std::string name, std::string alias)
 
 void JuniorDeveloper::solve_problem() const  // Implementation of the solve_problem method for the JuniorDeveloper class
 {
-    spacer;
+    std::cout << "------------------" << std::endl;
     this -> solve_problem_template();
     std::cout << "Puh, that was tough" << std::endl;
     Developer::drink_coffee();
-    spacer;
+    std::cout << "------------------" << std::endl;
 }
 
 void SeniorDeveloper::solve_problem() const  // Implementation of the solve_problem method for the SeniorDeveloper class
 {
-    spacer;
+    std::cout << "------------------" << std::endl;
     this -> solve_problem_template();
     std::cout << "Ha, that was EZ!" << std::endl;
     Developer::drink_coffee();
-    spacer;
+    std::cout << "------------------" << std::endl;
 }
