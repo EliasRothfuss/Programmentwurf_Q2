@@ -11,18 +11,30 @@ class Developer  // Base Class Developer
     void solve_problem_template() const;
 
    public:
-    Developer(std::string name, std::string alias);  // Constructor to set the name and alias of the Developer
+    /// @brief Constructor to set the name and alias of the Developer
+    /// @param name 
+    /// @param alias 
+    Developer(std::string name, std::string alias);
     virtual ~Developer() = default;
 
     static void drink_coffee();              // Imported method ;)
     virtual void solve_problem() const = 0;  // vi
 
-    auto get_name() const -> std::string;   // Get the name of the Developer
-    auto get_alias() const -> std::string;  // Get the alias of the Developer
+    /// @brief get the name of the developer
+    /// @return std::string of name
+    auto get_name() const -> std::string;  
+    
+    /// @brief get the name of the developer
+    /// @return std::string of alias
+    auto get_alias() const -> std::string;  
 };
 
+/// @brief Overloaded operator << to output Developer name and alias
+/// @param stream 
+/// @param dev 
+/// @return std::ostream&;
 auto operator<<(std::ostream& stream, const Developer& dev)
-    -> std::ostream&;  // Overloaded operator << to output Developer name and alias
+    -> std::ostream&;  
 
 class SeniorDeveloper : public Developer
 {
