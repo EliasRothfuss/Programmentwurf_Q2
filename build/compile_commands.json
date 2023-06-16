@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/root/projects/Programmentwurf_Q2/build",
+  "command": "/usr/bin/clang++  -I/root/projects/Programmentwurf_Q2/include -g -Wall -Wextra -pedantic -std=gnu++14 -o CMakeFiles/developer_exec.dir/src/developer.cpp.o -c /root/projects/Programmentwurf_Q2/src/developer.cpp",
+  "file": "/root/projects/Programmentwurf_Q2/src/developer.cpp"
+},
+{
+  "directory": "/root/projects/Programmentwurf_Q2/build",
+  "command": "/usr/bin/clang++  -I/root/projects/Programmentwurf_Q2/include -g -Wall -Wextra -pedantic -std=gnu++14 -o CMakeFiles/main_exec.dir/src/main.cpp.o -c /root/projects/Programmentwurf_Q2/src/main.cpp",
+  "file": "/root/projects/Programmentwurf_Q2/src/main.cpp"
+},
+{
+  "directory": "/root/projects/Programmentwurf_Q2/build",
+  "command": "/usr/bin/clang++  -I/root/projects/Programmentwurf_Q2/include -g -Wall -Wextra -pedantic -DGTEST_HAS_PTHREAD=1 -std=gnu++14 -o CMakeFiles/tests.dir/test/developer_test.cpp.o -c /root/projects/Programmentwurf_Q2/test/developer_test.cpp",
+  "file": "/root/projects/Programmentwurf_Q2/test/developer_test.cpp"
+}
+]

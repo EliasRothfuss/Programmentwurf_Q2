@@ -1,0 +1,5 @@
+if(EXISTS "/root/projects/Programmentwurf_Q2/build/tests[1]_tests.cmake")
+  include("/root/projects/Programmentwurf_Q2/build/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()

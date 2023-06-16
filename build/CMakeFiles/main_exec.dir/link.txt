@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/main_exec.dir/src/main.cpp.o -o main_exec  libdeveloper_exec.a 
