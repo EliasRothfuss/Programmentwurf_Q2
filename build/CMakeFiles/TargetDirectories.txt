@@ -1,6 +1,0 @@
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/developer_exec.dir
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/main_exec.dir
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/tests.dir
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/test.dir
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/edit_cache.dir
-/root/projects/Programmentwurf_Q2/build/CMakeFiles/rebuild_cache.dir

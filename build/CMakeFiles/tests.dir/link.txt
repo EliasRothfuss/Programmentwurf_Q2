@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g CMakeFiles/tests.dir/test/developer_test.cpp.o -o tests  libdeveloper_exec.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 

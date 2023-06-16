@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdeveloper_exec.a CMakeFiles/developer_exec.dir/src/developer.cpp.o
-/usr/bin/ranlib libdeveloper_exec.a
